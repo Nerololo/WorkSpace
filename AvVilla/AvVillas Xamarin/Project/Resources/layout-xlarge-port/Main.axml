@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Banca Móvil"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/TextoLabelXlarge"
+                android:id="@+id/BancaMovil"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold"
+                android:textColor="@color/TextLabel" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TextLabel"
+                android:text="Tipo de Identificación"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/TextoLabelXlarge"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/EditHeightXlarge"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/combospiner"
+                android:spinnerMode="dialog" />
+            <TextView
+                android:text="Número de Identificación"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/TextLabel"
+                android:id="@+id/LabelUsuario"
+                android:textSize="@dimen/TextoLabelXlarge"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold" />
+            <EditText
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/EditHeightXlarge"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/TextoUsuario"
+                android:hint="   Ingresa Número de identificación..."
+                android:textSize="@dimen/TextoButonLoginXLarge"
+                android:background="@color/EditText"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold" />
+            <TextView
+                android:text="Clave:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/TextLabel"
+                android:id="@+id/LabelContraseña"
+                android:textSize="@dimen/TextoLabelXlarge"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/EditHeightXlarge"
+                android:textColor="@android:color/black"
+                android:background="@color/EditText"
+                android:id="@+id/TextoContraseña"
+                android:hint="   Ingresa Clave Banca Móvil..."
+                android:textSize="@dimen/TextoButonLoginXLarge"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold" />
+            <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/LabelMensajeContraseña"
+                android:textColor="@android:color/holo_red_dark"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold" />
+            <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:id="@+id/LabelEspacio"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold" />
+            <Button
+                android:text="@string/InicioSeccion"
+                android:layout_width="@dimen/BotonLoginwidthXlarge"
+                android:layout_height="@dimen/BotonLoginHeightXlarge"
+                android:id="@+id/button1"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="@dimen/TextoButonLoginXLarge"
+                android:background="@color/BotonAzul"
+                android:textAppearance="@android:style/TextAppearance.Material.Display1"
+                android:textColor="@android:color/white"
+                android:fontFamily="@string/fontFamilyProject"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/relativeLayout1"
+                android:layout_marginTop="15dp">
+                <Button
+                    android:text="@string/Registrarme"
+                    android:layout_width="@dimen/BotonLoginwidthXlarge"
+                    android:layout_height="@dimen/BotonLoginHeightXlarge"
+                    android:id="@+id/BotonRegistrarme"
+                    android:gravity="center"
+                    android:textSize="@dimen/TextoButonLoginXLarge"
+                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                    android:background="@color/BotonGris"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <Button
+                    android:text="@string/Olvido"
+                    android:layout_width="@dimen/BotonLoginwidthXlarge"
+                    android:layout_height="@dimen/BotonLoginHeightXlarge"
+                    android:id="@+id/buttonOlvidoContrase"
+                    android:textSize="@dimen/TextoButonLoginXLarge"
+                    android:layout_marginLeft="380dp"
+                    android:background="@color/BotonGris"
+                    android:textAppearance="@android:style/TextAppearance.Material.Display1"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

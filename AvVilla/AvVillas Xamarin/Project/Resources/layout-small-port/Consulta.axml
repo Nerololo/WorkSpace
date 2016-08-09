@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="10dip"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:paddingTop="10dp"
+                android:background="@android:color/white">
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/TextLabel"
+                    android:text="Banca Móvil"
+                    android:textSize="@dimen/TextoLabelsmall"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <TextView
+                    android:text="Apellidos: "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/TextLabel"
+                    android:textSize="@dimen/TextoLabelsmall"
+                    android:id="@+id/LabelApellidos"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <EditText
+                    android:inputType="textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/EditHeightNormal"
+                    android:background="@color/EditText"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/TextApellidos"
+                    android:textSize="@dimen/TextoButonLoginSmall"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <TextView
+                    android:text="Nombres: "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/TextLabel"
+                    android:textSize="@dimen/TextoLabelsmall"
+                    android:id="@+id/LabelNombre"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <EditText
+                    android:inputType="textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/EditHeightNormal"
+                    android:background="@color/EditText"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/TextNombres"
+                    android:textSize="@dimen/TextoButonLoginSmall"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/spinnerSexo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/EditHeightNormal"
+                    android:layout_marginTop="5dp"
+                    android:background="@mipmap/combospiner"
+                    android:spinnerMode="dialog" />
+                <TextView
+                    android:text="Número de identificación"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/TextLabel"
+                    android:textSize="@dimen/TextoLabelsmall"
+                    android:id="@+id/LabelDocumento"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <EditText
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/EditHeightNormal"
+                    android:background="@color/EditText"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/TextDocumento"
+                    android:textSize="@dimen/TextoButonLoginSmall"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/spinnerTipoDocumento"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/EditHeightNormal"
+                    android:layout_marginTop="5dp"
+                    android:background="@mipmap/combospiner"
+                    android:spinnerMode="dialog" />
+                <FrameLayout
+                    android:minWidth="25dp"
+                    android:minHeight="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/fragment_Fecha_Inicial"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="25dp"
+                    android:layout_marginTop="10dp" />
+                <RelativeLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/imageView1"
+                        android:adjustViewBounds="true" />
+                    <Button
+                        android:id="@+id/btnBorrarUno"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="125.0dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginTop="130dp"
+                        android:background="@drawable/agregarfoto" />
+                    <Button
+                        android:id="@+id/AgregarFotoUno"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="125.0dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/carpeta" />
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/imageView2"
+                        android:layout_marginLeft="155.0dp"
+                        android:adjustViewBounds="true" />
+                    <Button
+                        android:id="@+id/btnBorrarDos"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="280.0dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginTop="130dp"
+                        android:background="@drawable/agregarfoto" />
+                    <Button
+                        android:id="@+id/AgregarFotoDos"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="280.0dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/carpeta" />
+                </RelativeLayout>
+                <EditText
+                    android:inputType="textMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:id="@+id/editObservaciones"
+                    android:hint="Observaciones"
+                    android:textSize="@dimen/TextoButonLoginSmall"
+                    android:textColor="@android:color/black"
+                    android:background="@color/EditText"
+                    android:gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold" />
+                <Button
+                    android:text="Enviar"
+                    android:layout_width="@dimen/BotonLoginwidthNormal"
+                    android:layout_height="@dimen/BotonLoginHeightSmall"
+                    android:id="@+id/btnEnviar"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/TextoButonLoginSmall"
+                    android:background="@color/BotonAzul"
+                    android:layout_marginTop="15dp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Display1"
+                    android:fontFamily="@string/fontFamilyProject"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

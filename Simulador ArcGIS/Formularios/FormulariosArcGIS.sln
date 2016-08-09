@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "demo", "demo\demo.vbproj", "{FC3D4315-B066-445E-AA80-65B2CBC3554E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapaArcgics", "..\Mapa_ArcGis\MapaArcgics\MapaArcgics.csproj", "{2E882F70-C63B-4A13-BD8D-F15A435CA0B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC3D4315-B066-445E-AA80-65B2CBC3554E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3D4315-B066-445E-AA80-65B2CBC3554E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3D4315-B066-445E-AA80-65B2CBC3554E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3D4315-B066-445E-AA80-65B2CBC3554E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E882F70-C63B-4A13-BD8D-F15A435CA0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E882F70-C63B-4A13-BD8D-F15A435CA0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E882F70-C63B-4A13-BD8D-F15A435CA0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E882F70-C63B-4A13-BD8D-F15A435CA0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://proyectosbryan.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = demo\\demo.vbproj
+		SccProjectName0 = demo
+		SccLocalPath0 = demo
+		SccProjectUniqueName1 = ..\\Mapa_ArcGis\\MapaArcgics\\MapaArcgics.csproj
+		SccProjectName1 = ../Mapa_ArcGis/MapaArcgics
+		SccLocalPath1 = ..\\Mapa_ArcGis\\MapaArcgics
+		SccLocalPath2 = .
+	EndGlobalSection
+EndGlobal

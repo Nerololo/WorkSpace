@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="SimulacionConnectionString">
+      <rd:DataSourceID>733ecbf3-fd5d-4230-884c-9b92bf84e3ae</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>2.5cm</RightMargin>
+  <LeftMargin>2.5cm</LeftMargin>
+  <BottomMargin>2.5cm</BottomMargin>
+  <rd:ReportID>016df29c-37ab-4ff9-9f05-bfea2ee0a9ea</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="DataSet_entidad">
+      <Fields>
+        <Field Name="ent_id_entidad">
+          <DataField>ent_id_entidad</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="ent_str_tipo_entidad">
+          <DataField>ent_str_tipo_entidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ent_str_nombre_entidad">
+          <DataField>ent_str_nombre_entidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ent_ima_simbolo">
+          <DataField>ent_ima_simbolo</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="ent_str_pais">
+          <DataField>ent_str_pais</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ent_str_empresa">
+          <DataField>ent_str_empresa</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ent_mon_costo">
+          <DataField>ent_mon_costo</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_largo">
+          <DataField>ent_dec_largo</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_ancho">
+          <DataField>ent_dec_ancho</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_alto">
+          <DataField>ent_dec_alto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_volumen">
+          <DataField>ent_dec_volumen</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_int_peso">
+          <DataField>ent_int_peso</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ent_str_tipo_material">
+          <DataField>ent_str_tipo_material</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ent_int_puntos_resistencia">
+          <DataField>ent_int_puntos_resistencia</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ent_int_cantidad_pilotos">
+          <DataField>ent_int_cantidad_pilotos</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ent_str_tipos_pilotos">
+          <DataField>ent_str_tipos_pilotos</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_velocidad_min">
+          <DataField>ent_dec_velocidad_min</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_velocidad_med">
+          <DataField>ent_dec_velocidad_med</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_velocidad_max">
+          <DataField>ent_dec_velocidad_max</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_str_tipo_sonido">
+          <DataField>ent_str_tipo_sonido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_radio_sonido">
+          <DataField>ent_dec_radio_sonido</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_volumen_max">
+          <DataField>ent_dec_volumen_max</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_peso_max">
+          <DataField>ent_dec_peso_max</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_int_cantidad_pax">
+          <DataField>ent_int_cantidad_pax</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_radio_entrega">
+          <DataField>ent_dec_radio_entrega</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_radio_recepcion">
+          <DataField>ent_dec_radio_recepcion</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_int_tiempo_entrega_kg">
+          <DataField>ent_int_tiempo_entrega_kg</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_radio_montar">
+          <DataField>ent_dec_radio_montar</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_radio_desmontar">
+          <DataField>ent_dec_radio_desmontar</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_radio_arrastre">
+          <DataField>ent_dec_radio_arrastre</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_capacidad_arrastre_kg">
+          <DataField>ent_dec_capacidad_arrastre_kg</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_capacidad_arrastre_m">
+          <DataField>ent_dec_capacidad_arrastre_m</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_altura_min">
+          <DataField>ent_dec_altura_min</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_altura_med">
+          <DataField>ent_dec_altura_med</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_altura_max">
+          <DataField>ent_dec_altura_max</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_profundidad_min">
+          <DataField>ent_dec_profundidad_min</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_profundidad_med">
+          <DataField>ent_dec_profundidad_med</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_profundidad_max">
+          <DataField>ent_dec_profundidad_max</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_str_tipo_combustible">
+          <DataField>ent_str_tipo_combustible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_capacidad_max_combustible">
+          <DataField>ent_dec_capacidad_max_combustible</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ent_dec_km_l">
+          <DataField>ent_dec_km_l</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>SimulacionConnectionString</DataSourceName>
+        <CommandText>SELECT ent_id_entidad, ent_str_tipo_entidad, ent_str_nombre_entidad, ent_ima_simbolo, ent_str_pais, ent_str_empresa, ent_mon_costo, ent_dec_largo, ent_dec_ancho, ent_dec_alto, ent_dec_volumen, ent_int_peso, 
+                  ent_str_tipo_material, ent_int_puntos_resistencia, ent_int_cantidad_pilotos, ent_str_tipos_pilotos, ent_dec_velocidad_min, ent_dec_velocidad_med, ent_dec_velocidad_max, ent_str_tipo_sonido, ent_dec_radio_sonido, 
+                  ent_dec_volumen_max, ent_dec_peso_max, ent_int_cantidad_pax, ent_dec_radio_entrega, ent_dec_radio_recepcion, ent_int_tiempo_entrega_kg, ent_dec_radio_montar, ent_dec_radio_desmontar, 
+                  ent_dec_radio_arrastre, ent_dec_capacidad_arrastre_kg, ent_dec_capacidad_arrastre_m, ent_dec_altura_min, ent_dec_altura_med, ent_dec_altura_max, ent_dec_profundidad_min, ent_dec_profundidad_med, 
+                  ent_dec_profundidad_max, ent_str_tipo_combustible, ent_dec_capacidad_max_combustible, ent_dec_km_l
+FROM     entidad</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSet</rd:DataSetName>
+        <rd:TableName>entidad</rd:TableName>
+        <rd:TableAdapterName>entidadTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>16cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>5.5cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <ZIndex>1</ZIndex>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>6cm</Width>
+            <DynamicRows>
+              <Grouping Name="matrix1_RowGroup1">
+                <GroupExpressions>
+                  <GroupExpression />
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="textbox9">
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <ZIndex>1</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!ent_str_tipo_entidad.Value</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <Top>3.5cm</Top>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>0.63492cm</Height>
+            <DynamicColumns>
+              <Grouping Name="matrix1_ColumnGroup1">
+                <GroupExpressions>
+                  <GroupExpression />
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="textbox4">
+                  <rd:DefaultName>textbox4</rd:DefaultName>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <ZIndex>2</ZIndex>
+                  <CanGrow>true</CanGrow>
+                  <Value>ent str nombre entidad</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <Width>11.5cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox3">
+              <rd:DefaultName>textbox3</rd:DefaultName>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+              <ZIndex>3</ZIndex>
+              <CanGrow>true</CanGrow>
+              <Value>ent str tipo entidad</Value>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.63492cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox5">
+                    <Style>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=Fields!ent_str_nombre_entidad.Value</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+        <Height>1.26984cm</Height>
+        <Left>3.25cm</Left>
+      </Matrix>
+      <Table Name="table1">
+        <DataSetName>DataSet_entidad</DataSetName>
+        <Top>0.25cm</Top>
+        <Width>10.66666cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ent_str_tipo_entidad">
+                      <rd:DefaultName>ent_str_tipo_entidad</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ent_str_tipo_entidad.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ent_str_nombre_entidad">
+                      <rd:DefaultName>ent_str_nombre_entidad</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ent_str_nombre_entidad.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>ent str tipo entidad</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>ent str nombre entidad</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>5.33333cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5.33333cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.90476cm</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+    </ReportItems>
+    <Height>5cm</Height>
+  </Body>
+  <Language>es-ES</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

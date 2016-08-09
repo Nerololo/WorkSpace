@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2228119D-A47C-4139-96E3-E9F74EE00BF1}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <AndroidSdkBuildToolsVersion>24.0.1</AndroidSdkBuildToolsVersion>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi-v7a;armeabi;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>
+    </DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <Debugger>Xamarin</Debugger>
+    <DebugSymbols>False</DebugSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi-v7a;armeabi;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Core">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.0.4.46\lib\MonoAndroid403\ZXing.Net.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.0.4.46\lib\MonoAndroid403\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.0.4.46\lib\MonoAndroid403\ZXingNetMobile.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity\BitmapHelpers.cs" />
+    <Compile Include="Activity\ConsultaActivity.cs" />
+    <Compile Include="Activity\DatePickerDialog.cs" />
+    <Compile Include="Activity\DatePickerFragment.cs" />
+    <Compile Include="Activity\SplashActivity.cs" />
+    <Compile Include="Helper Classes\Conexion Web Service.cs" />
+    <Compile Include="Helper Classes\HelperMethods.cs" />
+    <Compile Include="Activity\MainActivity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="service\Service.cs" />
+    <Compile Include="Activity\Menu.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\layout\Consulta.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DatePicker.axml" />
+    <AndroidResource Include="Resources\layout-normal-port\Consulta.axml" />
+    <AndroidResource Include="Resources\layout-large-port\Consulta.axml" />
+    <AndroidResource Include="Resources\layout-large-port\DatePicker.axml" />
+    <AndroidResource Include="Resources\layout-large-port\Main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-normal-port\DatePicker.axml" />
+    <AndroidResource Include="Resources\layout-normal-port\Main.axml" />
+    <AndroidResource Include="Resources\layout-small-port\Consulta.axml" />
+    <AndroidResource Include="Resources\layout-small-port\DatePicker.axml" />
+    <AndroidResource Include="Resources\layout-small-port\Main.axml" />
+    <AndroidResource Include="Resources\drawable\red_button.axml" />
+    <AndroidResource Include="Resources\layout\toolbar.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\Main.axml" />
+    <AndroidResource Include="Resources\drawable\AvVillas_Banner.png" />
+    <AndroidResource Include="Resources\layout\Modal.axml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\mipmap\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-ldpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap\splash.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\splash.png" />
+    <AndroidResource Include="Resources\mipmap-ldpi\splash.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\splash.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\splash.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\splash.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\splash.png" />
+    <AndroidResource Include="Resources\layout-xlarge-port\Consulta.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\DatePicker.axml" />
+    <AndroidResource Include="Resources\layout\Menu.axml" />
+    <AndroidResource Include="Resources\drawable\Consulta.png" />
+    <AndroidResource Include="Resources\layout-small-port\Menu.axml" />
+    <AndroidResource Include="Resources\layout-normal-port\Menu.axml" />
+    <AndroidResource Include="Resources\layout-large-port\Menu.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\Menu.axml" />
+    <AndroidResource Include="Resources\drawable\Carpeta.png" />
+    <AndroidResource Include="Resources\mipmap\ComboSpiner.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ComboSpiner.png" />
+    <AndroidResource Include="Resources\mipmap-ldpi\ComboSpiner.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ComboSpiner.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ComboSpiner.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ComboSpiner.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ComboSpiner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\calendarButton.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_splash.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\dimen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rayo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rounded_frame.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\EliminarFoto" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AgregarFoto" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+		<Target Name="BeforeBuild">
+		</Target>
+		<Target Name="AfterBuild">
+		</Target>
+ -->
+</Project>

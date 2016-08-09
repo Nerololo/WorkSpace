@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white">
+    <TextView
+        android:text="Fecha de Nacimiento"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/TextLabel"
+        android:textSize="@dimen/TextoLabelLarge"
+        android:id="@+id/LabelDocumento"
+        android:textStyle="bold"
+        android:fontFamily="@string/fontFamilyProject" />
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="1dp">
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="@dimen/EditHeight"
+            android:background="@color/EditText"
+            android:textColor="@android:color/black"
+            android:id="@+id/FechaInicial"
+            android:textSize="@dimen/TextoButonLoginLarge"
+            android:textStyle="bold"
+            android:fontFamily="@string/fontFamilyProject"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/btnCalendario"
+            android:layout_width="100.0dp"
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/calendarButton"
+            android:layout_toRightOf="@id/FechaInicial"
+            android:layout_height="80dp" />
+    </RelativeLayout>
+</LinearLayout>

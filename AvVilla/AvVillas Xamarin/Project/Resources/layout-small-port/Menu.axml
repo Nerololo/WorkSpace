@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+            <ImageButton
+                android:src="@drawable/consulta"
+                android:layout_width="@dimen/BotonMenuSmall"
+                android:layout_height="@dimen/BotonMenuSmall"
+                android:id="@+id/Consulta"
+                android:background="@android:color/white"
+                android:scaleType="fitXY" />
+            <ImageButton
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="@dimen/BotonMenuSmall"
+                android:layout_height="@dimen/BotonMenuSmall"
+                android:id="@+id/AvalPay"
+                android:layout_marginLeft="150dp"
+                android:background="@android:color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+            <ImageButton
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="@dimen/BotonMenuSmall"
+                android:layout_height="@dimen/BotonMenuSmall"
+                android:id="@+id/Novedades"
+                android:background="@android:color/white" />
+            <ImageButton
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="@dimen/BotonMenuSmall"
+                android:layout_height="@dimen/BotonMenuSmall"
+                android:id="@+id/DejateSorprender"
+                android:layout_marginLeft="150dp"
+                android:background="@android:color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+            <ImageButton
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="@dimen/BotonMenuSmall"
+                android:layout_height="@dimen/BotonMenuSmall"
+                android:id="@+id/Atencion"
+                android:background="@android:color/white" />
+            <ImageButton
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="@dimen/BotonMenuSmall"
+                android:layout_height="@dimen/BotonMenuSmall"
+                android:id="@+id/Tarifa"
+                android:layout_marginLeft="150dp"
+                android:background="@android:color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

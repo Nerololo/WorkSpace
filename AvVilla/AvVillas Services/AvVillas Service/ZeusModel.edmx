@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_9FC218_AvVillasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_login">
+          <Key>
+            <PropertyRef Name="ID_Login" />
+          </Key>
+          <Property Name="ID_Login" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usr_login" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="usr_password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="usr_tipoCedula" Type="char" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_peticion">
+          <Key>
+            <PropertyRef Name="ID_Peticion" />
+          </Key>
+          <Property Name="ID_Peticion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usr_nombres" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="usr_apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="usr_fechaNacimiento" Type="bigint" Nullable="false" />
+          <Property Name="usr_sexo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="usr_cedula" Type="int" Nullable="false" />
+          <Property Name="usr_tipoCedula" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="usr_imagenCara" Type="image" />
+          <Property Name="usr_imagenAtras" Type="image" />
+          <Property Name="usr_ID" Type="int" Nullable="false" />
+          <Property Name="usr_Observaciones" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="Relacion_login_peticion">
+          <End Role="tbl_login" Type="Self.tbl_login" Multiplicity="1" />
+          <End Role="tbl_peticion" Type="Self.tbl_peticion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_login">
+              <PropertyRef Name="ID_Login" />
+            </Principal>
+            <Dependent Role="tbl_peticion">
+              <PropertyRef Name="usr_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_9FC218_AvVillasModelStoreContainer">
+          <EntitySet Name="tbl_login" EntityType="Self.tbl_login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_peticion" EntityType="Self.tbl_peticion" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Relacion_login_peticion" Association="Self.Relacion_login_peticion">
+            <End Role="tbl_login" EntitySet="tbl_login" />
+            <End Role="tbl_peticion" EntitySet="tbl_peticion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_9FC218_AvVillasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_login">
+          <Key>
+            <PropertyRef Name="ID_Login" />
+          </Key>
+          <Property Name="ID_Login" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usr_login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usr_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usr_tipoCedula" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbl_peticion" Relationship="Self.Relacion_login_peticion" FromRole="tbl_login" ToRole="tbl_peticion" />
+        </EntityType>
+        <EntityType Name="tbl_peticion">
+          <Key>
+            <PropertyRef Name="ID_Peticion" />
+          </Key>
+          <Property Name="ID_Peticion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usr_nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usr_apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usr_fechaNacimiento" Type="Int64" Nullable="false" />
+          <Property Name="usr_sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="usr_cedula" Type="Int32" Nullable="false" />
+          <Property Name="usr_tipoCedula" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="usr_imagenCara" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="usr_imagenAtras" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="usr_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_login" Relationship="Self.Relacion_login_peticion" FromRole="tbl_peticion" ToRole="tbl_login" />
+          <Property Name="usr_Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="Relacion_login_peticion">
+          <End Role="tbl_login" Type="Self.tbl_login" Multiplicity="1" />
+          <End Role="tbl_peticion" Type="Self.tbl_peticion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_login">
+              <PropertyRef Name="ID_Login" />
+            </Principal>
+            <Dependent Role="tbl_peticion">
+              <PropertyRef Name="usr_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AvVillasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_login" EntityType="Self.tbl_login" />
+          <EntitySet Name="tbl_peticion" EntityType="Self.tbl_peticion" />
+          <AssociationSet Name="Relacion_login_peticion" Association="Self.Relacion_login_peticion">
+            <End Role="tbl_login" EntitySet="tbl_login" />
+            <End Role="tbl_peticion" EntitySet="tbl_peticion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_9FC218_AvVillasModelStoreContainer" CdmEntityContainer="AvVillasEntities">
+          <EntitySetMapping Name="tbl_login">
+            <EntityTypeMapping TypeName="DB_9FC218_AvVillasModel.tbl_login">
+              <MappingFragment StoreEntitySet="tbl_login">
+                <ScalarProperty Name="ID_Login" ColumnName="ID_Login" />
+                <ScalarProperty Name="usr_login" ColumnName="usr_login" />
+                <ScalarProperty Name="usr_password" ColumnName="usr_password" />
+                <ScalarProperty Name="usr_tipoCedula" ColumnName="usr_tipoCedula" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_peticion">
+            <EntityTypeMapping TypeName="DB_9FC218_AvVillasModel.tbl_peticion">
+              <MappingFragment StoreEntitySet="tbl_peticion">
+                <ScalarProperty Name="usr_Observaciones" ColumnName="usr_Observaciones" />
+                <ScalarProperty Name="ID_Peticion" ColumnName="ID_Peticion" />
+                <ScalarProperty Name="usr_nombres" ColumnName="usr_nombres" />
+                <ScalarProperty Name="usr_apellidos" ColumnName="usr_apellidos" />
+                <ScalarProperty Name="usr_fechaNacimiento" ColumnName="usr_fechaNacimiento" />
+                <ScalarProperty Name="usr_sexo" ColumnName="usr_sexo" />
+                <ScalarProperty Name="usr_cedula" ColumnName="usr_cedula" />
+                <ScalarProperty Name="usr_tipoCedula" ColumnName="usr_tipoCedula" />
+                <ScalarProperty Name="usr_imagenCara" ColumnName="usr_imagenCara" />
+                <ScalarProperty Name="usr_imagenAtras" ColumnName="usr_imagenAtras" />
+                <ScalarProperty Name="usr_ID" ColumnName="usr_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

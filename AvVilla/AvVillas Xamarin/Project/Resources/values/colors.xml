@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <color name="primary">#547799</color>
+  <color name="primaryDark">#172839</color>
+  <color name="accent">#91a2b7</color>
+  <color name="launchStatusBar">#3967d1</color>
+  <color name="window_background">#F5F5F5</color>
+  <color name ="BotonAzul">#ff1565c0</color>
+  <color name ="BotonGris">#ff616161</color>
+  <color name ="EditText">#ffe0e0e0</color>
+  <color name ="TextLabel">#ff9e9e9e</color>
+</resources>
