@@ -1,1 +1,1 @@
-Autocomplete and web viewer of *.tiff files
+Autocomplete, Report Viewer and web viewer of *.tiff files
